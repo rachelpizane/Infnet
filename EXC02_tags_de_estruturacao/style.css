@@ -55,25 +55,31 @@ main {
   grid-template-rows: auto 1fr;
 }
 
-main h1 {
+.main_title {
   text-align: center;
   font-size: 1.75rem;
   padding-bottom: 1rem;
   border-bottom: 2px solid #78206e;
 }
 
-main article ul {
-  padding: 0 1.5rem;
+.main_box {
+  display: grid;
+  grid-template-columns:repeat(auto-fit,minmax(100px, 1fr));
+  gap: .75rem;
 }
 
-main article ul li {
-  margin-bottom: 0.5rem;
+.button {
+  display: inline-block;
+  height: 2rem;
+  padding: 1rem;
+  background-color: #78206e;
+  border-radius: .25rem;
+  color: #f2cfee
 }
 
-main article ul li a {
-  color: #78206e;
-  font-weight: 700;
-}
+
+
+
 
 .atribuicao {
   background: #78206e;
