@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap");
 
 * {
   margin: 0px;
@@ -8,64 +8,33 @@
 body {
   font-family: "Roboto", sans-serif;
   background-color: #f9e7f7;
+  color: #78206e;
   height: 100vh;
+}
+
+.grid {
   display: grid;
   grid-template-rows: auto 1fr auto;
-  color: #78206e;
 }
 
-header {
+.header {
   background: #78206e;
   color: white;
+  padding: 0.75rem 1rem;
 }
 
-header nav ul {
-  display: flex;
-  list-style: none;
-  justify-content: space-around;
-}
-
-header nav ul li {
-  display: flex;
-  flex-basis: 50%;
-  justify-content: stretch;
-}
-
-header nav ul li a {
-  display: inline-block;
-  padding: 0.75rem;
-  width: 100%;
+.header_title {
+  font-size: 1.5rem;
+  font-weight: 500;
   text-align: center;
-  text-decoration: none;
-  color: #f2cfee;
+}
+
+.main {
+  padding: 2rem 1rem;
+  display: grid;
+  gap: 1.75rem;
   box-sizing: border-box;
-}
-
-header nav ul li a:hover {
-  background-color: #f2cfee;
-  color: #78206e;
-  transition: 0.2s;
-}
-
-main {
-  max-height: 100%;
-  padding: 1.75rem;
-  display: grid;
-  align-items: center;
-  grid-template-rows: auto 1fr;
-}
-
-.main_title {
-  text-align: center;
-  font-size: 1.75rem;
-  padding-bottom: 1rem;
-  border-bottom: 2px solid #78206e;
-}
-
-.main_box {
-  display: grid;
-  grid-template-columns:repeat(auto-fit,minmax(100px, 1fr));
-  gap: .75rem;
+  place-content: center;
 }
 
 .button {
@@ -73,13 +42,37 @@ main {
   height: 2rem;
   padding: 1rem;
   background-color: #78206e;
-  border-radius: .25rem;
-  color: #f2cfee
+  border-radius: 0.25rem;
+  color: #f2cfee;
 }
 
+.mini-box {
+  max-height: 175px;
+  padding: 1.25rem;
+  border: 4px solid #78206e;
+  position: relative;
+  border-radius: 0.75rem;
+  box-sizing: border-box;
+}
 
+.sub-title {
+  position: absolute;
+  top: -1.1rem;
+  left: 1rem;
+  background-color: #f9e7f7;
+  padding: 0 0.5rem;
+  color: #78206e;
+}
 
-
+.viewer {
+  display: block;
+  width: 400px;
+  height: 100%;
+  border-radius: 0.3rem;
+  box-sizing: border-box;
+  border: 2px solid #9b909a;
+  overflow: hidden;
+}
 
 .atribuicao {
   background: #78206e;
@@ -97,28 +90,12 @@ main {
   transition: 0.7s;
 }
 
+.other-title {
+  font-size: 1.75rem;
+  text-align: center;
+}
+
 @media (min-width: 768px) {
-  main article ul {
-    display: flex;
-    list-style: none;
-    justify-content: space-around;
-    align-items: center;
-  }
-
-  main article ul li a {
-    margin-bottom: 0;
-    padding: 0.5rem;
-    border-left: 2px solid transparent;
-    border-bottom: 2px solid transparent;
-    text-decoration: none;
-  }
-
-  main article ul li a:hover {
-    border-left: 2px solid #78206e;
-    border-bottom: 2px solid #78206e;
-    transition: 0.3s;
-  }
-
   .atribuicao {
     padding: 1.25rem;
   }
