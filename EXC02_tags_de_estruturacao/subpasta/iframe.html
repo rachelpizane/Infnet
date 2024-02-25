@@ -17,19 +17,46 @@
         <div class="mini-box">
             <a class="sub-title" href="links.html" target="subPagina">Home</a>
 
-            <iframe class="visualizador" name="subPagina" frameborder="0" allowfullscreen></iframe>
+            <iframe class="viewer" name="subPagina" frameborder="0" allowfullscreen></iframe>
         </div>
 
         <div class="mini-box">
             <h2 class="sub-title">Tag article</h2>
-            <iframe class="visualizador" src="./article.html" frameborder="0" allowfullscreen></iframe>
+            <iframe class="viewer" src="./article.html" frameborder="0" allowfullscreen></iframe>
         </div>
 
+        <div class="mini-box">
+            <!--Forma mais atual de linkar a tag com a tag iframe pelo Javascritp-->
+            <a id="button" class="sub-title" href="#">Clique aqui</a>
+            <iframe id="openLink" class="viewer" src="" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <div class="mini-box">
+            <!--Forma antiga de linkar a tag com a tag iframe pelo target e name-->
+            <a id="oldButton" class="sub-title" href="https://www.infnet.edu.br/infnet/instituto/" target="oldOpenLink">Clique aqui</a>
+            <iframe name="oldOpenLink" class="viewer" src="" frameborder="0" allowfullscreen></iframe>
+        </div>
 
         
+
         <!-- A tag iframe é utilizada para exibir um conteúdo de outra página dentro da página atual. Um exemplo é a exibição de um vídeo do YouTube. -->
+        
+        
     </main>
-    <footer class="atribuicao">
-        <p>Code by <a href="">Rachel Pizane</a></p>
-    </footer>
+    <footer>
+        <iframe class="maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.237069262381!2d-43.18780041864688!3d-22.904625128929936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997f4299e57241%3A0xaabea8ba93565068!2sSaara%20%2F%20Presidente%20Vargas!5e0!3m2!1spt-BR!2sbr!4v1708822712254!5m2!1spt-BR!2sbr" class="maps" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+     </footer>
+
+
+     <script>
+        let link = document.getElementById("button");
+
+        link.addEventListener("click", function () {
+            event.preventDefault();
+
+            let openLink = document.getElementById("openLink");
+            const novaURL = "https://www.infnet.edu.br/infnet/instituto/";
+            openLink.src = novaURL;
+        });
+    </script>
 </body>
