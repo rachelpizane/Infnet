@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 0603 | PWHC</title>
+
+    <style>
+        
+        video {
+            display: block;
+            margin: 1rem 0 2rem;
+        }
+    </style>
+</head>
+<body>
+    <h2>Simples</h2>
+    <video>
+        <source src="midia/movie.mp4" type="video/mp4">
+        <source src="midia/Movie.webm" type="video/webm">
+         Não foi possivel renderizar o video no navegador. <a href="midia/movie.mp4" download="">Clique aqui</a> para baixa-lo.
+     </video>
+    
+     <h2>Com controle e tamanho definido</h2>
+    <video width="300" controls>
+       <source src="midia/movie.mp4" type="video/mp4">
+       <source src="midia/Movie.webm" type="video/webm">
+        Não foi possivel renderizar o video no navegador. <a href="midia/movie.mp4" download="">Clique aqui</a> para baixa-lo.
+    </video>
+
+    <h2>Com controle,tamanho definido e autoplay</h2>
+    <p>A maioria dos navegadores só aceitam o autoplay se tiver com muted</p>
+    <video preload="metadata"width="300" controls autoplay>
+        <source src="midia/movie.mp4" type="video/mp4">
+        <source src="midia/Movie.webm" type="video/webm">
+         Não foi possivel renderizar o video no navegador. <a href="midia/movie.mp4" download="">Clique aqui</a> para baixa-lo.
+    </video>
+
+    <h2>Com controle e tamanho definido, autoplay, muted e preloadoad="metadata" e loop</h2>
+    <video preload="metadata" width="300" controls autoplay muted loop>
+        <source src="midia/movie.mp4" type="video/mp4">
+        <source src="midia/Movie.webm" type="video/webm">
+         Não foi possivel renderizar o video no navegador. <a href="midia/movie.mp4" download="">Clique aqui</a> para baixa-lo.
+    </video>
+    
+    <h2>Observações</h2>
+
+    <p>A tag video é uma tag de conteudo multimidia  e seus principais atributos são: src, controls, width, height, autoplay, muted, preload e loop.</p>
+
+    <p>Contudo, não é ideal utilizar o atributo src direto na tag video, porque se o navegador não suportar o formato do video, ele não irá renderiza-lo</p>
+
+    <p>Para o autoplay funcionar atualmente nos navegadores, o video deve estar com o atributo muted.</p>
+
+    <p>Devemos colocar mais de uma tag source porque cada navegador aceita um formato de video de diferente.</p>
+    <p>Os formatos mais comuns são: mp4, webm e ogg.</p>
+    <p>Para que o video seja responsivo, devemos colocar o atributo width="100%"</p>
+    
+    <p>E se o navegador não suportar o video, devemos colocar uma mensagem informando que não foi possivel renderizar o video e incluir um link para baixa-lo.</p>
+
+    <p>O ideal é colocar atributo controls para que o usuario possa controlar o video.</p>
+
+    <p>A tag preload possui 3 valores: none, metadata e auto. O valor none não carrega nada, o valor metadata carrega apenas os metadados e o valor auto carrega o video inteiro.</p>
+
+    <p>É de bom tom colocar o atributo preload="metadata" para que o video carregue apenas os metadados</p>
+
+</body>
+</html>
