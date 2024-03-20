@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 5px 10px;
+            text-align: center;
+            font-family:cursive
+        }
+
+        th, td {
+            width: 120px;
+            height: 20px;
+        }
+
+        thead {
+            background-color: rgb(202, 201, 201);
+        }
+
+        .geral { 
+            margin: 20px;
+            width: 200px;
+            height: 300px;
+            padding: 1rem;
+            border: 1px solid black;
+            background-color: aquamarine;
+        }
+
+        .hidden {
+            overflow: hidden;
+        }
+
+        .scroll {
+            overflow: scroll;
+        }
+
+        .auto {
+            overflow: auto;
+        }
+
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Estado</th>
+                <th colspan="2">Cor Favorita</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Rachel Maia</td>
+                <td>Rio de Janeiro</td>
+                <td>Vermelho</td>
+                <td>Rosa</td>
+            </tr>
+            <tr>
+                <td>Marcelo Costa</td>
+                <td>Sergipe</td>
+                <td>Azul</td>
+                <td>Vermelho</td>
+            </tr>
+            <tr>
+                <td>Beatriz Castro</td>
+                <td>Minas Gerais</td>
+                <td>Preto</td>
+                <td>Azul</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="geral hidden">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor in est officiis natus perspiciatis itaque temporibus ducimus consectetur sed! Ullam, sit rem? Ipsum, voluptatem quasi suscipit delectus exercitationem laboriosam quas.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At deleniti voluptatem, temporibus voluptas id libero ab odio ad ipsam ipsum nihil pariatur animi autem blanditiis possimus dicta molestiae! Error, molestias!</p>
+    </div>
+
+    <div class="geral scroll">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor in est officiis natus perspiciatis itaque temporibus ducimus consectetur sed! Ullam, sit rem? Ipsum, voluptatem quasi suscipit delectus exercitationem laboriosam quas.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At deleniti voluptatem, temporibus voluptas id libero ab odio ad ipsam ipsum nihil pariatur animi autem blanditiis possimus dicta molestiae! Error, molestias!</p>
+    </div>
+
+    <div class="geral auto">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor in est officiis natus perspiciatis itaque temporibus ducimus consectetur sed! Ullam, sit rem? Ipsum, voluptatem quasi suscipit delectus exercitationem laboriosam quas.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At deleniti voluptatem, temporibus voluptas id libero ab odio ad ipsam ipsum nihil pariatur animi autem blanditiis possimus dicta molestiae! Error, molestias!</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,14 @@
+.container {
+    width: 300px;
+    height: 200px;
+    background-color: #208ffe;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    width: 70px;
+    height: 70px;
+    background-color: whitesmoke;
+}
